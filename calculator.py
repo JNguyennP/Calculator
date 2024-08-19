@@ -30,6 +30,23 @@ def calculator():
         if repeat.lower() != 'yes':
             break
 
+def number(num):
+    while True:
+        try:
+            return float(input(num))
+        except ValueError:
+            print('Error: Value has to be a number')
+
+def operator(op):
+    while True:
+        op = input('Enter operator (+, -, *, /): ')
+        if operator in ['+', '-', '*', '/']:
+            return op
+        else:
+            print('Error: Invalid Operator.')      
+
+
+
 def performing_calculations(num1, num2, operator):
     if operator == '+':
         total = num1 + num2
